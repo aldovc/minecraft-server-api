@@ -20,14 +20,20 @@
   },
   "homepage": "https://github.com/bmiddha/minecraft-server-api#readme",
   "devDependencies": {
+    "@types/node": "^10.12.17",
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/mongoose": "^5.3.5",
     "nodemon": "^1.18.9",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "@types/node": "^10.12.17",
+    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.0",
     "rcon-client": "^3.1.4",
     "targz": "^1.0.1"
   }
