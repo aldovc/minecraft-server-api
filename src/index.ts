@@ -7,9 +7,10 @@ dotenv.config();
 console.log("Starting App");
 
 const apiPort = process.env.APIPORT || 3000;
-app.listen(apiPort);
+app.listen(apiPort, () => {
+    console.log("Listening on port " + apiPort);
+});
 
-console.log("Listening on port " + apiPort);
 
 const connectOptions = {
   host: process.env.RCONHOST, port: Number(process.env.RCONPORT), password: process.env.RCONPASSWORD
@@ -36,7 +37,7 @@ app.get("/api/mc/cmd", async (req, res) => {
 
 app.get("/api/mc/manage/announce", async (req, res) => {
     let message = "Message from serverlords: " + req.query.message;
-    let result = await runRconCommand("say " + message);
+    let result = await runRconCommand(`say ${message}`);
     res.send(result);
 });
 
